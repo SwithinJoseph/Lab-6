@@ -1,4 +1,3 @@
-package co.grandcircus;
 
 import java.util.Scanner;
 
@@ -19,14 +18,14 @@ public class DiceRoll {
 			die2 = generateRandomDieRoll(diceSides);
 
 			System.out.printf("%15d %d", die1, die2);
-			//System.out.println(die1 + " " + die2);
+			// System.out.println(die1 + " " + die2);
 			System.out.print("\nDo you want to roll again? (y/n) ");
 			cont = scnr.next();
 
 		} while (cont.equalsIgnoreCase("yes") || cont.equalsIgnoreCase("y"));
 
 		System.out.printf("%20s", "Goodbye!");
-		
+
 	}
 
 	public static int generateRandomDieRoll(int sides) {
