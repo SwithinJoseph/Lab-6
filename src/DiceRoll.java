@@ -14,14 +14,20 @@ public class DiceRoll {
 			System.out.print("How many sides do your dice have? ");
 			diceSides = scnr.nextInt();
 
-			die1 = generateRandomDieRoll(diceSides);
-			die2 = generateRandomDieRoll(diceSides);
+			do {
+				die1 = generateRandomDieRoll(diceSides);
+				die2 = generateRandomDieRoll(diceSides);
 
-			System.out.printf("%15d %d", die1, die2);
-			// System.out.println(die1 + " " + die2);
-			System.out.print("\nDo you want to roll again? (y/n) ");
+				System.out.printf("%15d %d", die1, die2);
+				System.out.print("\nDo you want to roll again? (y/n) ");
+				cont = scnr.next();
+
+			} while (cont.equalsIgnoreCase("yes") || cont.equalsIgnoreCase("y"));
+
+			System.out.println();
+			System.out.println("Do you want to roll different dice? (y/n)");
 			cont = scnr.next();
-
+			
 		} while (cont.equalsIgnoreCase("yes") || cont.equalsIgnoreCase("y"));
 
 		System.out.printf("%20s", "Goodbye!");
